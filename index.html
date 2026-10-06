@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+    
+    body {
+      background: linear-gradient(95deg, #8ff0dc, #f4daf8);
+    }
+    
+    
+    
+    .lebih_dalam {
+      text-align: center;
+      
+    }
+    
+    .dalam {
+      text-align: center;
+      
+    }
+    
+    .awal{
+      text-align: center;
+      
+    }
+
+    h3 {
+      font-family: 'Anton';
+    }
+    
+    h2 {
+      color: #dd0000;
+      font-family: 'Montserrat';
+    }
+
+    p {
+      font-family: 'Montserrat';
+      font-size: 15px
+    }
+
+    #bagian_dalam {
+      display: none;
+      
+    }
+    #home {
+      display: visible;
+    }
+    #mendalam_lagi {
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #222;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #inti_doksli {
+      display: none;
+    }
+    
+    #doksli1 {
+      width: 125px;
+      height: 150px;
+    }
+
+    #doksli2 {
+      width: 125px;
+      height: 150px;
+      transform: translateX(0px)
+      
+    }
+
+    .indoksli {
+      text-align: center;
+    }
+  </style>
+<body>
+  <div id='home' class='awal'>
+    <h3>
+      Selamat datang di aplikasi
+    </h3>
+    <h2>
+      MEMBAHAS 
+      SEJARAH KELAM OTMASBU
+    </h2>
+    <button onclick='pindah()'>Masuk ke dalam</button>
+  </div>
+  <div id='bagian_dalam' class='dalam'>
+    <h3>
+      Apa itu otmasbu
+    </h3>
+    <p>
+      Otmasbu adalah sebuah legenda organisasi sekolah "MTS bahrul ulum", dahulunya sekolah ini diminati banyak orang, namun karna suatu kesalahan sekolah ini menjadi bangkrut dan akhirnya tutup pada tahun 1989.<br> <cite>Tekan tombol dibawah untuk informasi yang lebih mendalam </cite>
+    </p>
+    <button onclick="mengdalam()">Tekan untuk lanjut</button>
+    <button onclick='kembali()'>Kembali</button>
+  </div>
+  <div id="mendalam_lagi" class='lebih_dalam'>
+    <h3>
+      lanjutan
+    </h3>
+    <p>
+      pada tahun 1988 tepat 1 tahun sebelum sekolah ditutup, jendral yang pernah sekolah di situ bernama "ucok prindapan22pro" pernah berkata <q>
+        <mark>
+          ja***k tenan, sekolah tem***
+        </mark>
+      </q> yang berarti hinaan terhadap sekolah ini kerna banyak kasus yang beredar diantaranya judol, korupsi uang amal, dan lain lain. dan sekarang jendral ucok di sandra dan ini dokslinnya
+      <br>
+      <cite>
+        tekan lihat untuk melihat dokumen asli
+      </cite>
+      
+    </p>
+    <button onclick="doksli()">Tekan untuk lihat</button>
+    <button onclick='kembali_lagi()'>Kembali</button>
+  </div>
+  <div id="inti_doksli" class="indoksli">
+    <h1>Dokumen asli</h1>
+    <img src="ucok1.jpg" id="doksli1">
+    <img src="ucok2.jpg" id="doksli2">
+    <h3> Sebelum dan Sesudah </h3>
+    <p>
+      itulah akibatnya menyerang antek antek sekolah, anda bisa menonton film gratis untuk bonus 
+      <br>
+      <cite>
+        Tekan tombol untuk Menonton
+      </cite>
+    </p>
+    <button onclick="pindahLink()">Tekan untuk menonton</button>
+    <button onclick="kembali_lagi_lagi()">Kembali</button>
+  </div>
+</body>
+  <script>
+    
+    let mendalam = document.getElementById('mendalam_lagi')
+   let home = document.getElementById('home')
+   let inti = document.getElementById('bagian_dalam')
+    let dokumensli = document.getElementById("inti_doksli")
+    function pindah() {
+      inti.style.display = 'inline-block'
+      home.style.display = 'none'
+    }
+    function mengdalam() {
+      inti.style.display = 'none'
+      mendalam.style.display = 'inline-block'
+    }
+    function doksli() {
+      mendalam.style.display = 'none'
+      dokumensli.style.display = 'inline-block'
+    }
+    function pindahLink() {
+        window.location.href = "https://youtu.be/Wz1W_omigwg?t=14&si=mrGCsgYZC4tlTuZD";
+    }
+    function kembali() {
+      inti.style.display = 'none'
+      home.style.display = 'inline-block'
+    }
+    function kembali_lagi() {
+      inti.style.display = 'inline-block'
+      mendalam.style.display = 'none'
+    }
+    function kembali_lagi_lagi() {
+      mendalam.style.display = 'inline-block'
+      dokumensli.style.display = 'none'
+    }
+  </script>
+</html>
